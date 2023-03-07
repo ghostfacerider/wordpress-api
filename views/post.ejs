@@ -1,0 +1,41 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+    <div class="container col-md-6 offset-md-3 mt-5">
+      <div class="col-xs-1 text-center">
+        <h1 ><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+      </div>
+     
+
+      <form action="/post" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="title" class="form-control" id="title" placeholder="Enter your Title" required="required">
+        </div>
+        <div class="form-group">
+          <label for="title">Content</label>
+          <input type="text" name="content" class="form-control" id="content" placeholder="Enter your Title" required="required">
+        </div>
+        <div class="form-group">
+          <label for="title">Alt Text</label>
+          <input type="text" name="alt_text" class="form-control" id="alt_text" placeholder="Enter your Title" required="required">
+        </div>
+        <div class="form-group">
+          <label for="title">Caption</label>
+          <input type="text" name="caption" class="form-control" id="caption" placeholder="Enter your Title" required="required">
+        </div>
+        <div class="form-group">
+          <label for="title">Descrition</label>
+          <input textarea="text" name="descrition" class="form-control" id="descrition" placeholder="Enter your Title" required="required">
+        </div>
+        <hr>
+          <div class="form-group mt-3">
+            <label for="featured_image" class="mr-2">Featured Image:</label>
+            <input type="file" name="featured_image">
+          </div>
+          <hr>
+        <input  class="btn btn-primary" type="submit"  value="submit" >
+      </form>
+    </div>
+  </body>
+</html>
