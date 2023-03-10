@@ -12,17 +12,23 @@ var wp = new WPAPI({
 router.get("/", async function (req, res, next) {
   /**get the posts from thhe wordpress api */
 
-  const data = await wp.posts();
+  const data = await wp.posts().embed();
 
   let posts = [];
 
   data.forEach(function (item) {
+    console.log(item._embedded)
     posts.push(
       {
         title: item.title.rendered,
-        author: item.author,
-        image: item.featured_media/`${id}`,
-        excerpt: item.excerpt.rendered
+        author: item._embedded.author[0].name,
+        excerpt: item.excerpt.rendered,
+        // image: item._embedded['wp:featuredmedia'][0].source_url,
+      //   if(item._embedded['wp:featuredmedia'])
+      //     { return let imageUrl = item._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url
+      // } else { 
+      //   return null
+      // }
       }
     );
   });
