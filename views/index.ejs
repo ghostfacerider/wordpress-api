@@ -1,12 +1,11 @@
 <%- include('includes/head.ejs') %>
 <%- include('includes/nav.ejs') %>
-<div class="container">
+<div class="col-xs-1" align="center">
   <% for(var i=0; i < posts.length; i++) { %>
-    <h2><%= posts[i].title %></h2>
-    <h2><%= posts[i].author %></h2>
-    <div><%- posts[i].excerpt %></div>
-    <%= posts[i].image%>
-    <%- posts[i].image%>
+    <img class="img-fluid" src="<%-posts[i].featured_image %>" alt="<%- posts[i].title %>">
+    <h2><%- posts[i].title %></h2>
+    <h4>BY: <%- posts[i].author %></h4>
+    <div class="w-50" ><%- posts[i].excerpt %></div>
   <% } %>
 </div>
   </body>

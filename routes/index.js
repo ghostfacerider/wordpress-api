@@ -17,13 +17,13 @@ router.get("/", async function (req, res, next) {
   let posts = [];
 
   data.forEach(function (item) {
-    console.log(item._embedded)
+    // console.log(item._embedded)
     posts.push(
       {
         title: item.title.rendered,
-        author: item._embedded.author[0].name,
+        author: item._embedded.author['0'].name,
         excerpt: item.excerpt.rendered,
-        // image: item._embedded['wp:featuredmedia'][0].source_url,
+        featured_image: item._embedded['wp:featuredmedia']['0'].media_details.sizes.small.source_url,
       //   if(item._embedded['wp:featuredmedia'])
       //     { return let imageUrl = item._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url
       // } else { 

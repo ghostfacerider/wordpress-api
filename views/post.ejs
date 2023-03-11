@@ -13,25 +13,38 @@
           <input type="text" name="title" class="form-control" id="title" placeholder="Enter your Title" required="required">
         </div>
         <div class="form-group">
-          <label for="title">Content</label>
+          <label for="Content">Content</label>
           <input type="text" name="content" class="form-control" id="content" placeholder="Enter your Title" required="required">
         </div>
         <div class="form-group">
-          <label for="title">Alt Text</label>
+          <label for="Alt Text">Alt Text</label>
           <input type="text" name="alt_text" class="form-control" id="alt_text" placeholder="Enter your Title" required="required">
         </div>
         <div class="form-group">
-          <label for="title">Caption</label>
+          <label for="Caption">Caption</label>
           <input type="text" name="caption" class="form-control" id="caption" placeholder="Enter your Title" required="required">
         </div>
-        <div class="form-group">
-          <label for="title">Descrition</label>
-          <input textarea="text" name="descrition" class="form-control" id="descrition" placeholder="Enter your Title" required="required">
+       
+        <div class="form-group  ">
+          <label for="Description">description</label>
+          <textarea  name="description" 
+            class="form-control" id="description" rows="3"
+            placeholder="Enter your Title" required="required"></textarea>
         </div>
+        <br>
+<div class="form-group">
+  <select class="form-select" aria-label="Default select example">
+    <option selected value="2">News</option>
+    <option value="3">Opition</option>
+    <option value="4">Arts + Music</option>
+    <option value="5">Food + Drink</option>
+  </select>
+</div>
+       
         <hr>
           <div class="form-group mt-3">
-            <label for="featured_image" class="mr-2">Featured Image:</label>
-            <input type="file" name="featured_image">
+            <label for="featured_image" class="mr-2" >Featured Image:</label>
+            <input type="file" name="featured_image" required>
           </div>
           <hr>
         <input  class="btn btn-primary" type="submit"  value="submit" >
